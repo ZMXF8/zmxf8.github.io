@@ -1,170 +1,66 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ZMXF科技</title><link>https://zmxf8.github.io</link><description>ZMXF</description><copyright>ZMXF科技</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/208015923?v=4</url><title>avatar</title><link>https://zmxf8.github.io</link></image><lastBuildDate>Mon, 09 Jun 2025 10:06:07 +0000</lastBuildDate><managingEditor>ZMXF科技</managingEditor><ttl>60</ttl><webMaster>ZMXF科技</webMaster><item><title>装机日记：从「手忙脚乱」到「点亮成功」的全彩实录</title><link>https://zmxf8.github.io/post/zhuang-ji-ri-ji-%EF%BC%9A-cong-%E3%80%8C-shou-mang-jiao-luan-%E3%80%8D-dao-%E3%80%8C-dian-liang-cheng-gong-%E3%80%8D-de-quan-cai-shi-lu.html</link><description>## 一、&lt;span style='color: #FF5733;'&gt;配件选购：钱包与性能的「色彩博弈」&lt;/span&gt;  
-- **CPU**：&lt;span style='color: #2980B9;'&gt;AMD Ryzen 7 7700X&lt;/span&gt;（8核16线程，蓝色科技感拉满💙）  
-- **主板**：&lt;span style='color: #3498DB;'&gt;华硕 ROG B650-E&lt;/span&gt;（电竞装甲+RGB灯效，深邃黑蓝超酷炫🔵）  
-- **显卡**：&lt;span style='color: #E74C3C;'&gt;RTX 4070 Ti 星曜&lt;/span&gt;（白色主题显卡，颜值党首选🤍）  
-- **内存**：&lt;span style='color: #9B59B6;'&gt;金百达银爵 DDR5 6800 32G×2&lt;/span&gt;（银紫色散热片，超频潜力MAX💜）  
-- **机箱**：&lt;span style='color: #F1C40F;'&gt;航嘉 暗夜猎手7&lt;/span&gt;（侧透玻璃+前置RGB风扇，光影效果绝了🧡）  
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ZMXF科技</title><link>https://zmxf8.github.io</link><description>ZMXF</description><copyright>ZMXF科技</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/208015923?v=4</url><title>avatar</title><link>https://zmxf8.github.io</link></image><lastBuildDate>Mon, 09 Jun 2025 10:11:19 +0000</lastBuildDate><managingEditor>ZMXF科技</managingEditor><ttl>60</ttl><webMaster>ZMXF科技</webMaster><item><title>装机日记：从「手忙脚乱」到「点亮成功」的全彩实录</title><link>https://zmxf8.github.io/post/zhuang-ji-ri-ji-%EF%BC%9A-cong-%E3%80%8C-shou-mang-jiao-luan-%E3%80%8D-dao-%E3%80%8C-dian-liang-cheng-gong-%E3%80%8D-de-quan-cai-shi-lu.html</link><description># 装机大冒险：从「零件大乱斗」到「光污染巨兽」的彩色觉醒  
 
-## 二、&lt;span style='color: #FF9800;'&gt;装机现场：手残党「五彩翻车」名场面&lt;/span&gt;  
-### ▶ &lt;span style='color: #FFC107;'&gt;CPU安装：心跳加速的「金色30秒」&lt;/span&gt;  
-1. 轻轻拨开主板上的&lt;span style='color: #FFD700;'&gt;CPU锁杆&lt;/span&gt;（金色部件超显眼✨）  
-2. 对准&lt;span style='color: #FF6347;'&gt;三角形缺口&lt;/span&gt;放入CPU（手一抖差点歪掉，冷汗💦）  
-3. 压下锁杆「咔嗒」就位，成功！&lt;span style='color: #2ECC71;'&gt;绿色OK标记&lt;/span&gt;亮起✅  
-
-### ▶ &lt;span style='color: #8BC34A;'&gt;理线地狱：黑色背线的「彩虹挑战」&lt;/span&gt;  
-- 主板24pin线：走&lt;span style='color: #34495E;'&gt;顶部背线孔&lt;/span&gt;（深灰通道超隐蔽）  
-- CPU 8pin线：穿过&lt;span style='color: #2C3E50;'&gt;后置散热孔&lt;/span&gt;（藏线神位！）  
-- 显卡供电线：用&lt;span style='color: #E67E22;'&gt;橙色扎带&lt;/span&gt;分组（鲜艳颜色方便后期调整）  
-
-## 三、&lt;span style='color: #03A9F4;'&gt;点亮时刻：五颜六色的「高光魔法」&lt;/span&gt;  
-### ▶ 首次开机失败：&lt;span style='color: #E91E63;'&gt;红色警报灯&lt;/span&gt;闪烁  
-- 故障：风扇转3秒停，主板&lt;span style='color: #FF0000;'&gt;DEBUG红灯&lt;/span&gt;亮（内存报错！）  
-- 解决：重新插拔&lt;span style='color: #9C27B0;'&gt;紫色内存&lt;/span&gt;，用橡皮擦金手指（紫光一闪，成功点亮✨）  
-
-### ▶ 成功画面：&lt;span style='color: #1ABC9C;'&gt;绿色系统启动&lt;/span&gt;+&lt;span style='color: #3498DB;'&gt;蓝色BIOS界面&lt;/span&gt;  
-- 鲁大师跑分：&lt;span style='color: #F39C12;'&gt;135W&lt;/span&gt;（橙色数字超醒目）  
-- 烤机温度：CPU稳定&lt;span style='color: #2ECC71;'&gt;68℃&lt;/span&gt;（绿色健康值），显卡&lt;span style='color: #34495E;'&gt;75℃&lt;/span&gt;（深灰正常范围）  
-
-## 四、&lt;span style='color: #9C27B0;'&gt;避坑指南：彩色标签划重点！&lt;/span&gt;  
-- **必买工具**：&lt;span style='color: #2980B9;'&gt;蓝色防静电手套&lt;/span&gt;（防手汗氧化元件）+&lt;span style='color: #FF5733;'&gt;红色磁性螺丝刀&lt;/span&gt;（吸住螺丝防掉落）  
-- **颜色记忆法**：  
-  - &lt;span style='color: #FF0000;'&gt;红色&lt;/span&gt;：危险操作（如插反CPU）  
-  - &lt;span style='color: #2ECC71;'&gt;绿色&lt;/span&gt;：安装正确（如散热器扣具到位）  
-  - &lt;span style='color: #FFC107;'&gt;黄色&lt;/span&gt;：重点步骤（如理线顺序）  
-- **终极口诀**：&lt;span style='color: #8E44AD;'&gt;先插电源再开机&lt;/span&gt;，&lt;span style='color: #3498DB;'&gt;先查代码再拆件&lt;/span&gt;，&lt;span style='color: #F1C40F;'&gt;装机不急慢慢来&lt;/span&gt;！  
-
-## 五、&lt;span style='color: #2980B9;'&gt;成品展示：我的「彩虹主机」靓照&lt;/span&gt;  
-![机箱侧透](https://example.com/rainbow-pc.jpg)  
-（示意图：侧透玻璃下，RGB风扇循环&lt;span style='color: #FF69B4;'&gt;粉&lt;/span&gt;-&lt;span style='color: #00FFFF;'&gt;青&lt;/span&gt;-&lt;span style='color: #FFD700;'&gt;金&lt;/span&gt;灯光，主板装甲&lt;span style='color: #4CAF50;'&gt;绿光&lt;/span&gt;同步呼吸）  
+## 一、&lt;span style='color: #246FE0;'&gt;配件狩猎：钱包瘦身计划&lt;/span&gt;  
+- **CPU**：&lt;span style='color: #38BDF8;'&gt;AMD Ryzen 7 7700X&lt;/span&gt;（8核16线程，蓝buff叠满💙）  
+- **主板**：&lt;span style='color: #1976D2;'&gt;华硕 ROG B650-E&lt;/span&gt;（黑甲RGB，电竞味儿拉满⚡）  
+- **显卡**：&lt;span style='color: #ECEFF1;'&gt;RTX 4070 Ti 星曜&lt;/span&gt;（白透外壳，颜值党狂喜🤍）  
+- **内存**：&lt;span style='color: #9C27B0;'&gt;金百达银爵 DDR5 6800&lt;/span&gt;（银紫散热，超频如喝水🍷）  
+- **机箱**：&lt;span style='color: #FFA000;'&gt;航嘉 暗夜猎手7&lt;/span&gt;（侧透+RGB，光污染预备役🧡）  
 
 
-### 🌈 **彩色代码说明**  
-1. **色值类型**：  
-   - 英文色名：`red`、`blue`、`green` 等（简洁直观）  
-   - 十六进制：`#FF5733`（橙红）、`#9B59B6`（紫薯色）等（精准配色）  
-   - RGB色值：可自定义如 `rgb(255, 200, 150)`（浅橙色）  
-
-2. **适用场景**：  
-   - GitHub 仓库的 `README.md`（直接渲染颜色）  
-   - Typora 编辑器（实时预览彩色效果）  
-   - GitHub Pages 网站（需部署后查看）  
-
-3. **修改技巧**：  
-   - 复制文本到任意编辑器，修改 `&lt;span style='color: 色值;'&gt;` 中的色值即可换色  
-   - 用 [ColorHexa](https://www.colorhexa.com/) 查找更多炫酷色值（如荧光色、渐变色）  
-
-直接保存为 `.md` 文件，打开即可看到五彩字体效果～ 如需调整颜色或补充内容，随时告诉我！ 😊
-&lt;/think&gt;
-以下是包含五颜六色字体的装机分享 Markdown 代码，可直接保存为 `.md` 文件：
+## 二、&lt;span style='color: #FF7043;'&gt;装机修罗场：手残党的极限操作&lt;/span&gt;  
+### ▶ &lt;span style='color: #FFC107;'&gt;CPU安装：与金色锁杆的生死博弈&lt;/span&gt;  
+1. 掰主板&lt;span style='color: #FFD700;'&gt;金色锁杆&lt;/span&gt;（手颤如筛糠，怕弯针😭）  
+2. 对准&lt;span style='color: #FF6F00;'&gt;三角缺口&lt;/span&gt;塞CPU（差点插反，冷汗直冒💦）  
+3. 压杆「咔嗒」声响起——&lt;span style='color: #4CAF50;'&gt;绿色成就达成✅&lt;/span&gt;  
 
 
-```markdown
-# 装机全记录：从配件挑选到成功点亮的多彩之旅  
-
-## 一、&lt;span style='color: #FF5733;'&gt;配件选购：一场色彩与性能的狂欢&lt;/span&gt;  
-- **CPU**：&lt;span style='color: #2980B9;'&gt;Intel i5-13600K&lt;/span&gt;（蓝色科技风，性能与颜值兼具💙）  
-- **主板**：&lt;span style='color: #3498DB;'&gt;微星 MAG B760M MORTAR&lt;/span&gt;（黑灰装甲，稳重又酷炫⚫️）  
-- **显卡**：&lt;span style='color: #E74C3C;'&gt;RTX 4060 天启 OC&lt;/span&gt;（白色外壳+RGB灯效，颜值党必选🤍）  
-- **内存**：&lt;span style='color: #9B59B6;'&gt;芝奇 DDR4 3200 16G×2&lt;/span&gt;（紫色散热片，超频潜力MAX💜）  
-- **机箱**：&lt;span style='color: #F1C40F;'&gt;先马平头哥 M7&lt;/span&gt;（侧透玻璃+前置风扇，光影效果拉满🧡）  
-
-## 二、&lt;span style='color: #FF9800;'&gt;装机过程：手忙脚乱中的色彩博弈&lt;/span&gt;  
-### ▶ &lt;span style='color: #FFC107;'&gt;CPU安装：金色部件的「心跳时刻」&lt;/span&gt;  
-1. 打开主板&lt;span style='color: #FFD700;'&gt;金色CPU锁杆&lt;/span&gt;，对准&lt;span style='color: #FF6347;'&gt;三角形缺口&lt;/span&gt;放入芯片（手别抖！）  
-2. 压下锁杆至「咔嗒」就位，覆盖&lt;span style='color: #2ECC71;'&gt;绿色散热硅脂&lt;/span&gt;（薄厚适中很关键✅）  
-
-### ▶ &lt;span style='color: #8BC34A;'&gt;理线大作战：黑色背线的彩色魔法&lt;/span&gt;  
-- 主板24pin线：穿过&lt;span style='color: #34495E;'&gt;深灰背线孔&lt;/span&gt;，用&lt;span style='color: #E67E22;'&gt;橙色扎带&lt;/span&gt;固定  
-- CPU 8pin线：沿&lt;span style='color: #2C3E50;'&gt;蓝色胶条&lt;/span&gt;走背线，隐藏得严丝合缝  
-- 显卡供电：用&lt;span style='color: #FF0000;'&gt;红色标签&lt;/span&gt;标记接口，避免插反  
-
-## 三、&lt;span style='color: #03A9F4;'&gt;点亮瞬间：五颜六色的胜利之光&lt;/span&gt;  
-### ▶ 首次失败：&lt;span style='color: #E91E63;'&gt;红色警示灯&lt;/span&gt;闪烁（内存没插紧！）  
-- 解决：重新插拔&lt;span style='color: #9C27B0;'&gt;紫色内存条&lt;/span&gt;，听到「咔嗒」两声（紫色光芒亮起✨）  
-
-### ▶ 成功画面：&lt;span style='color: #1ABC9C;'&gt;绿色系统启动&lt;/span&gt;+&lt;span style='color: #3498DB;'&gt;蓝色BIOS界面&lt;/span&gt;  
-- 鲁大师跑分：&lt;span style='color: #F39C12;'&gt;120W&lt;/span&gt;（橙色数字超亮眼）  
-- 烤机温度：CPU&lt;span style='color: #2ECC71;'&gt;70℃&lt;/span&gt;（绿色安全区），显卡&lt;span style='color: #34495E;'&gt;78℃&lt;/span&gt;（深灰正常范围）  
-
-## 四、&lt;span style='color: #9C27B0;'&gt;避坑指南：用颜色标记关键步骤&lt;/span&gt;  
-- **必备工具**：&lt;span style='color: #2980B9;'&gt;蓝色防静电手套&lt;/span&gt;（防手汗）+&lt;span style='color: #FF5733;'&gt;红色磁性螺丝刀&lt;/span&gt;（吸住螺丝）  
-- **颜色记忆法**：  
-  - &lt;span style='color: #FF0000;'&gt;红色&lt;/span&gt;：危险操作（如带电插拔）  
-  - &lt;span style='color: #2ECC71;'&gt;绿色&lt;/span&gt;：安装正确（如风扇风向）  
-  - &lt;span style='color: #FFC107;'&gt;黄色&lt;/span&gt;：重点提醒（如理线顺序）  
-- **口诀**：&lt;span style='color: #8E44AD;'&gt;先查接口再动手&lt;/span&gt;，&lt;span style='color: #3498DB;'&gt;轻拿轻放别硬掰&lt;/span&gt;！  
-
-## 五、&lt;span style='color: #2980B9;'&gt;成品展示：我的「彩虹战士」主机&lt;/span&gt;  
-![机箱效果图](https://example.com/pc-build.jpg)  
-（示意图：RGB风扇循环&lt;span style='color: #FF69B4;'&gt;粉&lt;/span&gt;-&lt;span style='color: #00FFFF;'&gt;青&lt;/span&gt;-&lt;span style='color: #FFD700;'&gt;金&lt;/span&gt;灯光，主板&lt;span style='color: #4CAF50;'&gt;绿光&lt;/span&gt;同步闪烁）  
+### ▶ &lt;span style='color: #00C853;'&gt;理线地狱：把黑线玩成彩虹&lt;/span&gt;  
+- 24pin线走&lt;span style='color: #546E7A;'&gt;顶置暗孔&lt;/span&gt;（深灰通道，藏线黑科技）  
+- 8pin线穿&lt;span style='color: #263238;'&gt;后置散热槽&lt;/span&gt;（蓝色胶条护航，颜值与实用并存）  
+- 显卡供电用&lt;span style='color: #FF5722;'&gt;橙色扎带&lt;/span&gt;捆扎（显眼好调整，手残救星🚀）  
 
 
-### 🌟 **使用说明**  
-1. **保存格式**：直接复制以上内容，保存为 `装机分享.md`  
-2. **查看效果**：  
-   - 在 **GitHub** 上传后自动渲染彩色字体  
-   - 用 **Typora** 等Markdown编辑器打开，实时预览色彩  
-3. **修改颜色**：  
-   - 替换 `&lt;span style='color: 色值;'&gt;` 中的色值（如 `#FF5733` 改为 `#FF0000` 变红）  
-   - 色值查询：[在线取色器](https://htmlcolorcodes.com/color-picker/)  
-
-如果需要调整颜色搭配或补充细节，随时告诉我哦！ 😊
-&lt;/think&gt;
-以下是为你生成的包含五颜六色字体的装机分享 Markdown 内容，可直接保存为 `.md` 文件使用：
+## 三、&lt;span style='color: #66BB6A;'&gt;点亮奇迹：RGBの魔法时刻&lt;/span&gt;  
+### ▶ &lt;span style='color: #F44336;'&gt;首亮翻车：红色警报狂欢&lt;/span&gt;  
+- 故障：风扇转3秒停，主板&lt;span style='color: #D32F2F;'&gt;DEBUG红灯&lt;/span&gt;暴走（内存叛变！）  
+- 急救：拔插&lt;span style='color: #9C27B0;'&gt;紫色内存条&lt;/span&gt;，橡皮擦金手指（紫光一闪，复活✨）  
 
 
-# 装机那些事儿：从踩坑到真香的全彩体验  
-
-## 一、&lt;span style='color: #FF5733;'&gt;配件挑选：眼睛与钱包的「色彩战争」&lt;/span&gt;  
-- **CPU**：&lt;span style='color: #2980B9;'&gt;AMD Ryzen 5 7600&lt;/span&gt;（6核12线程，蓝色性能小钢炮💙）  
-- **主板**：&lt;span style='color: #3498DB;'&gt;技嘉 B650M AORUS ELITE&lt;/span&gt;（黑红电竞风，散热装甲超扎实❤️⚫️）  
-- **显卡**：&lt;span style='color: #E74C3C;'&gt;RX 6650 XT 白金版&lt;/span&gt;（银色金属外壳，颜值与性能并存🤍）  
-- **内存**：&lt;span style='color: #9B59B6;'&gt;金士顿 FURY DDR5 5600 16G×2&lt;/span&gt;（黑色散热片+红色灯条，超频利器🔥）  
-- **机箱**：&lt;span style='color: #F1C40F;'&gt;航嘉 暗夜猎手5&lt;/span&gt;（侧透玻璃+前置RGB风扇，光影拉满🧡）  
-
-## 二、&lt;span style='color: #FF9800;'&gt;装机现场：手残党の「五彩翻车」实录&lt;/span&gt;  
-### ▶ &lt;span style='color: #FFC107;'&gt;CPU安装：金色插槽的「生死30秒」&lt;/span&gt;  
-1. 掰开主板&lt;span style='color: #FFD700;'&gt;金色CPU锁杆&lt;/span&gt;，对准&lt;span style='color: #FF6347;'&gt;三角形缺口&lt;/span&gt;轻放芯片（手一抖差点歪掉😰）  
-2. 压下锁杆「咔嗒」到位，涂上&lt;span style='color: #2ECC71;'&gt;绿色硅脂&lt;/span&gt;（薄薄一层，多了会翻车！✅）  
-
-### ▶ &lt;span style='color: #8BC34A;'&gt;理线地狱：黑色机箱的「彩虹工程」&lt;/span&gt;  
-- 主板供电线：穿过&lt;span style='color: #34495E;'&gt;灰色背线孔&lt;/span&gt;，用&lt;span style='color: #E67E22;'&gt;黄色扎带&lt;/span&gt;分组  
-- 显卡8pin线：沿&lt;span style='color: #2C3E50;'&gt;蓝色胶条&lt;/span&gt;隐藏，末端用&lt;span style='color: #FF0000;'&gt;红色标签&lt;/span&gt;标记  
-- 最终效果：背线整整齐齐，正面只露显卡，治愈强迫症✨  
-
-## 三、&lt;span style='color: #03A9F4;'&gt;点亮时刻：五颜六色的「心跳瞬间」&lt;/span&gt;  
-### ▶ 首次失败：&lt;span style='color: #E91E63;'&gt;红色LED灯&lt;/span&gt;狂闪（内存没插紧！）  
-- 解决：拔出&lt;span style='color: #9C27B0;'&gt;紫色内存条&lt;/span&gt;，擦金手指后插紧，听到「咔嗒」两声（紫色灯亮起💜）  
-
-### ▶ 成功开机：&lt;span style='color: #1ABC9C;'&gt;绿色自检通过&lt;/span&gt;+&lt;span style='color: #3498DB;'&gt;蓝色系统启动&lt;/span&gt;  
-- 鲁大师跑分：&lt;span style='color: #F39C12;'&gt;110W&lt;/span&gt;（橙色数字超醒目）  
-- 烤机测试：CPU稳定&lt;span style='color: #2ECC71;'&gt;65℃&lt;/span&gt;（绿色健康区），显卡&lt;span style='color: #34495E;'&gt;72℃&lt;/span&gt;（深灰安全线）  
-
-## 四、&lt;span style='color: #9C27B0;'&gt;避坑指南：用颜色划重点！&lt;/span&gt;  
-- **必买工具**：&lt;span style='color: #2980B9;'&gt;蓝色防静电手环&lt;/span&gt;（防静电击穿元件）+&lt;span style='color: #FF5733;'&gt;粉色镊子&lt;/span&gt;（夹螺丝超方便）  
-- **颜色警示**：  
-  - &lt;span style='color: #FF0000;'&gt;红色&lt;/span&gt;：危险操作（如大力出奇迹）  
-  - &lt;span style='color: #2ECC71;'&gt;绿色&lt;/span&gt;：正确操作（如风扇风向朝散热片）  
-  - &lt;span style='color: #FFC107;'&gt;黄色&lt;/span&gt;：重要步骤（如先接电源再开机）  
-- **口诀**：&lt;span style='color: #8E44AD;'&gt;配件对孔再下手&lt;/span&gt;，&lt;span style='color: #3498DB;'&gt;线序理清再通电&lt;/span&gt;！  
-
-## 五、&lt;span style='color: #2980B9;'&gt;成品秀：我的「彩虹战舰」主机&lt;/span&gt;  
-![机箱侧透](https://example.com/pc-build.png)  
-（示意图：RGB风扇循环&lt;span style='color: #FF69B4;'&gt;粉&lt;/span&gt;-&lt;span style='color: #00FFFF;'&gt;青&lt;/span&gt;-&lt;span style='color: #FFD700;'&gt;金&lt;/span&gt;灯光，主板&lt;span style='color: #4CAF50;'&gt;绿光&lt;/span&gt;同步呼吸，超炫酷！）  
+### ▶ &lt;span style='color: #03A9F4;'&gt;成功加冕：绿蓝双色登基&lt;/span&gt;  
+- 鲁大师跑分：&lt;span style='color: #FF9800;'&gt;135W&lt;/span&gt;（橙色数字亮瞎眼）  
+- 烤机温度：CPU稳在&lt;span style='color: #81C784;'&gt;68℃&lt;/span&gt;（绿色安全区），显卡&lt;span style='color: #B0BEC5;'&gt;75℃&lt;/span&gt;（深灰舒适区）  
 
 
-### 📌 **使用说明**  
-1. **保存文件**：复制以上内容，粘贴到记事本或 Typora，保存为 `装机分享.md`  
-2. **查看效果**：  
-   - 上传到 GitHub 仓库，直接预览彩色字体  
-   - 用 Typora 打开，实时显示五颜六色效果  
-3. **修改颜色**：  
-   - 替换 `&lt;span style='color: 色值;'&gt;` 中的色值（如 `#FF5733` 改为 `#FFA500` 变橙色）  
-   - 色值推荐：[Coolors 色卡生成器](https://coolors.co/)  
+## 四、&lt;span style='color: #7E57C2;'&gt;避坑法典：彩色标签保命指南&lt;/span&gt;  
+- **必囤神器**：&lt;span style='color: #2196F3;'&gt;蓝色防静电手套&lt;/span&gt;（防手汗腐蚀）+ &lt;span style='color: #F44336;'&gt;红色磁性螺丝刀&lt;/span&gt;（螺丝再也不丢了）  
+- **颜色暗语**：  
+  - &lt;span style='color: #FF0000;'&gt;红色&lt;/span&gt; = 危险操作（如带电插拔）  
+  - &lt;span style='color: #00FF00;'&gt;绿色&lt;/span&gt; = 操作正确（如散热器对位）  
+  - &lt;span style='color: #FFFF00;'&gt;黄色&lt;/span&gt; = 重点步骤（如理线顺序）  
+- **口诀**：&lt;span style='color: #9575CD;'&gt;先看说明书再动手，线没理好别通电&lt;/span&gt;！  
 
-如果需要调整颜色搭配或补充细节，随时告诉我哦！ 😊
-。</description><guid isPermaLink="true">https://zmxf8.github.io/post/zhuang-ji-ri-ji-%EF%BC%9A-cong-%E3%80%8C-shou-mang-jiao-luan-%E3%80%8D-dao-%E3%80%8C-dian-liang-cheng-gong-%E3%80%8D-de-quan-cai-shi-lu.html</guid><pubDate>Mon, 09 Jun 2025 10:03:49 +0000</pubDate></item><item><title>永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</title><link>https://zmxf8.github.io/post/yong-jiu-mian-fei-%E3%80%81-duo-jie-dian-VPN%21%20%20CloudflareWorker-ji-su-da-jian-%EF%BC%8C-you-xuan-IP%E3%80%81-miao-kai-_%204K-8K%EF%BC%8C-jie-suo-ChatGPT%2C-bu-xian-liu-liang-%EF%BC%81.html</link><description>  今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！
+
+## 五、&lt;span style='color: #D81B60;'&gt;成品Show：我的RGB神兽&lt;/span&gt;  
+![机箱侧透](https://example.com/rgb-pc.jpg)  
+（示意图：侧透玻璃下，RGB风扇循环&lt;span style='color: #FF4081;'&gt;粉&lt;/span&gt;-&lt;span style='color: #00BCD4;'&gt;青&lt;/span&gt;-&lt;span style='color: #FFC107;'&gt;金&lt;/span&gt;光，主板装甲&lt;span style='color: #4CAF50;'&gt;绿光&lt;/span&gt;同步呼吸）  
+
+
+### ✨ 彩色代码使用说明  
+1. **保存方法**：复制以上内容 → 粘贴到文本编辑器 → 保存为 `装机.md`  
+2. **渲染支持**：  
+   - GitHub 仓库/Pages：直接显示彩色（天然支持 HTML 标签）  
+   - Typora/MarkText：实时预览彩色效果（所见即所得）  
+3. **改色技巧**：  
+   - 替换 `&lt;span style='color: 色值;'&gt;` 中的色值（如 `#246FE0` → `#FF0000` 变红）  
+   - 推荐工具：[ColorHexa](https://www.colorhexa.com/)（找荧光色、渐变色超方便）  
+
+
+**特点**：  
+- 色彩聚焦 **“关键信息”**（硬件型号、故障、成功标记），避免视觉杂乱；  
+- 结构清晰（标题→列表→细节），符合 Markdown 阅读习惯；  
+- 直接复制即可用，兼容主流平台渲染。</description><guid isPermaLink="true">https://zmxf8.github.io/post/zhuang-ji-ri-ji-%EF%BC%9A-cong-%E3%80%8C-shou-mang-jiao-luan-%E3%80%8D-dao-%E3%80%8C-dian-liang-cheng-gong-%E3%80%8D-de-quan-cai-shi-lu.html</guid><pubDate>Mon, 09 Jun 2025 10:03:49 +0000</pubDate></item><item><title>永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</title><link>https://zmxf8.github.io/post/yong-jiu-mian-fei-%E3%80%81-duo-jie-dian-VPN%21%20%20CloudflareWorker-ji-su-da-jian-%EF%BC%8C-you-xuan-IP%E3%80%81-miao-kai-_%204K-8K%EF%BC%8C-jie-suo-ChatGPT%2C-bu-xian-liu-liang-%EF%BC%81.html</link><description>  今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！
 
 ![Image](https://github.com/user-attachments/assets/3e3be5fc-6844-4d62-9da3-e79d02e92d00)
 
