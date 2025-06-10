@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/208015923?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）
+>邮箱:zmxf-fxc@139.com
+> 更新时间：2025-06-10  
+> 适用人群：新手、小白、第一次组装电脑的朋友  
+> 本文将手把手教你如何从零开始组装一台电脑，并成功安装 Windows 系统
+
+---
+
+## 📦 一、你需要准备的东西
+
+### 🔧 工具准备
+
+- 十字螺丝刀（必备）
+- 防静电手环（推荐）
+- 一张 U 盘（8GB 或以上）
+- 一张干净的桌子
+- 你的耐心与细心
+
+### 🧱 硬件清单（中端配置示例）
+
+| 组件     | 建议型号/规格              | 说明                           |
+|----------|----------------------------|--------------------------------|
+| CPU      | AMD Ryzen 5 5600 / i5-12400 | 中端处理器，适合办公/游戏      |
+| 主板     | B550 / B660                | 选择与你的CPU兼容的接口        |
+| 内存     | 16GB (8GBx2) DDR4 3200MHz  | 建议双通道                     |
+| 显卡     | RTX 4060 / RX 7600         | 如果玩游戏或剪辑必须要         |
+| 存储     | 1TB NVMe M.2 SSD           | 速度快，开机快                  |
+| 电源     | 550W 金牌全模组            | 稳定可靠，有冗余               |
+| 机箱     | 中塔 ATX                   | 注意是否能放下显卡/散热器      |
+| 散热器   | 原装风冷或塔式风冷         | 保证 CPU 温度控制               |
+
+---
+
+## 🧩 二、开始装机！安装步骤详解
+
+### 🧠 1. 安装 CPU
+
+1. 打开主板上的 CPU 插槽（抬起金属压杆）
+2. 找到 CPU 上的金三角，对准主板上的标记
+3. 垂直轻放下 CPU，不要用力按压
+4. 压下金属压杆并扣上
+
+### 🔥 2. 安装散热器
+
+- 原装风冷：直接压上卡扣或螺丝固定
+- 第三方塔式风冷：别忘了涂抹硅脂（米粒大小），再拧螺丝固定
+- 最后把风扇电源线插入主板的 CPU_FAN 接口
+
+### 🔋 3. 安装内存条
+
+1. 打开内存插槽两侧卡扣
+2. 对准金手指缺口插入，均匀按下至“咔哒”一声
+3. 优先使用双通道（按主板说明书插槽顺序）
+
+### 💾 4. 安装 SSD（M.2）
+
+1. 找到主板的 M.2 插槽
+2. 插入 SSD，轻微抬角插入
+3. 按下并用螺丝固定
+
+### 🖼️ 5. 安装主板到机箱
+
+1. 安装 IO 屏蔽挡板
+2. 将主板对准 standoff 铜柱放好
+3. 用螺丝固定主板，通常6-9颗
+
+### 🎮 6. 安装显卡
+
+1. 拆掉机箱后部 PCI 挡板
+2. 将显卡插入主板 PCIe x16 插槽
+3. 用螺丝固定显卡尾部
+4. 连接显卡电源（如有）
+
+### 🔌 7. 连接所有电源线
+
+- 24PIN 主板供电
+- 8PIN CPU供电
+- 显卡供电（如需要）
+- SATA 或风扇供电线
+- 前置 IO（电源键、USB、音频）连接主板
+
+---
+
+## ⚙️ 三、BIOS 设置 & 系统安装
+
+### 🚪 1. 进入 BIOS
+
+1. 启动电脑时反复按 `DEL` 或 `F2` 进入 BIOS
+2. 检查以下设置：
+   - 时间、内存识别、CPU 型号是否正确
+   - 设置启动顺序：将 U 盘设为第一启动项
+   - 可启用 XMP 模式（提高内存频率）
+3. 保存设置并退出（F10）
+
+---
+
+## 💿 四、系统U盘制作与安装 Windows 11
+
+### 🧰 1. 制作系统启动 U 盘（Windows）
+
+> 推荐使用微软官方工具：Media Creation Tool
+
+- 下载地址：[https://www.microsoft.com/software-download/windows11](https://www.microsoft.com/software-download/windows11)
+- 插入U盘（至少8GB）
+- 打开工具，选择“为另一台电脑创建安装介质”
+- 选择系统版本，制作完成后就是启动盘
+
+### 🖥️ 2. 安装系统步骤
+
+1. 启动电脑，从U盘启动
+2. 进入 Windows 安装界面后选择语言、版本
+3. 自定义安装 > 删除旧分区（如新盘会显示“未分配空间”）
+4. 新建分区并点击“下一步”安装
+5. 安装完自动重启进入桌面
+
+---
+
+## 🧰 五、驱动程序安装
+
+### 🚗 1. 下载主板驱动
+
+- 方法一：访问主板官网下载对应型号的驱动（含网卡、声卡、芯片组等）
+- 方法二：使用 Driver Booster 等驱动助手（需联网）
+
+### 🎮 2. 显卡驱动安装
+
+- NVIDIA 官网：[https://www.nvidia.com/Download/index.aspx?lang=cn](https://www.nvidia.com/Download/index.aspx?lang=cn)
+- AMD 官网：[https://www.amd.com/zh/support](https://www.amd.com/zh/support)
+
+---
+
+## 🧹 六、后续操作建议
+
+- 安装浏览器、输入法、常用工具（7-Zip、PotPlayer、WPS等）
+- 配置还原点 / 安装系统更新
+- 打开 TPM 和安全启动（用于 Windows 11）
+
+---
+
+## 🏁 总结
+
+🎉 现在你已经成功完成了一台从硬件到系统的完整装机流程！
+
+如果电脑无法开机，请检查：
+
+- 电源线是否接好  
+- 内存条是否插紧  
+- 显卡、电源是否点亮  
+- 主板是否有报警蜂鸣音  
+
+有任何问题，欢迎复查步骤或联系专业人士。">
+<meta property="og:title" content="💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）">
+<meta property="og:description" content="# 💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）
+>邮箱:zmxf-fxc@139.com
+> 更新时间：2025-06-10  
+> 适用人群：新手、小白、第一次组装电脑的朋友  
+> 本文将手把手教你如何从零开始组装一台电脑，并成功安装 Windows 系统
+
+---
+
+## 📦 一、你需要准备的东西
+
+### 🔧 工具准备
+
+- 十字螺丝刀（必备）
+- 防静电手环（推荐）
+- 一张 U 盘（8GB 或以上）
+- 一张干净的桌子
+- 你的耐心与细心
+
+### 🧱 硬件清单（中端配置示例）
+
+| 组件     | 建议型号/规格              | 说明                           |
+|----------|----------------------------|--------------------------------|
+| CPU      | AMD Ryzen 5 5600 / i5-12400 | 中端处理器，适合办公/游戏      |
+| 主板     | B550 / B660                | 选择与你的CPU兼容的接口        |
+| 内存     | 16GB (8GBx2) DDR4 3200MHz  | 建议双通道                     |
+| 显卡     | RTX 4060 / RX 7600         | 如果玩游戏或剪辑必须要         |
+| 存储     | 1TB NVMe M.2 SSD           | 速度快，开机快                  |
+| 电源     | 550W 金牌全模组            | 稳定可靠，有冗余               |
+| 机箱     | 中塔 ATX                   | 注意是否能放下显卡/散热器      |
+| 散热器   | 原装风冷或塔式风冷         | 保证 CPU 温度控制               |
+
+---
+
+## 🧩 二、开始装机！安装步骤详解
+
+### 🧠 1. 安装 CPU
+
+1. 打开主板上的 CPU 插槽（抬起金属压杆）
+2. 找到 CPU 上的金三角，对准主板上的标记
+3. 垂直轻放下 CPU，不要用力按压
+4. 压下金属压杆并扣上
+
+### 🔥 2. 安装散热器
+
+- 原装风冷：直接压上卡扣或螺丝固定
+- 第三方塔式风冷：别忘了涂抹硅脂（米粒大小），再拧螺丝固定
+- 最后把风扇电源线插入主板的 CPU_FAN 接口
+
+### 🔋 3. 安装内存条
+
+1. 打开内存插槽两侧卡扣
+2. 对准金手指缺口插入，均匀按下至“咔哒”一声
+3. 优先使用双通道（按主板说明书插槽顺序）
+
+### 💾 4. 安装 SSD（M.2）
+
+1. 找到主板的 M.2 插槽
+2. 插入 SSD，轻微抬角插入
+3. 按下并用螺丝固定
+
+### 🖼️ 5. 安装主板到机箱
+
+1. 安装 IO 屏蔽挡板
+2. 将主板对准 standoff 铜柱放好
+3. 用螺丝固定主板，通常6-9颗
+
+### 🎮 6. 安装显卡
+
+1. 拆掉机箱后部 PCI 挡板
+2. 将显卡插入主板 PCIe x16 插槽
+3. 用螺丝固定显卡尾部
+4. 连接显卡电源（如有）
+
+### 🔌 7. 连接所有电源线
+
+- 24PIN 主板供电
+- 8PIN CPU供电
+- 显卡供电（如需要）
+- SATA 或风扇供电线
+- 前置 IO（电源键、USB、音频）连接主板
+
+---
+
+## ⚙️ 三、BIOS 设置 & 系统安装
+
+### 🚪 1. 进入 BIOS
+
+1. 启动电脑时反复按 `DEL` 或 `F2` 进入 BIOS
+2. 检查以下设置：
+   - 时间、内存识别、CPU 型号是否正确
+   - 设置启动顺序：将 U 盘设为第一启动项
+   - 可启用 XMP 模式（提高内存频率）
+3. 保存设置并退出（F10）
+
+---
+
+## 💿 四、系统U盘制作与安装 Windows 11
+
+### 🧰 1. 制作系统启动 U 盘（Windows）
+
+> 推荐使用微软官方工具：Media Creation Tool
+
+- 下载地址：[https://www.microsoft.com/software-download/windows11](https://www.microsoft.com/software-download/windows11)
+- 插入U盘（至少8GB）
+- 打开工具，选择“为另一台电脑创建安装介质”
+- 选择系统版本，制作完成后就是启动盘
+
+### 🖥️ 2. 安装系统步骤
+
+1. 启动电脑，从U盘启动
+2. 进入 Windows 安装界面后选择语言、版本
+3. 自定义安装 > 删除旧分区（如新盘会显示“未分配空间”）
+4. 新建分区并点击“下一步”安装
+5. 安装完自动重启进入桌面
+
+---
+
+## 🧰 五、驱动程序安装
+
+### 🚗 1. 下载主板驱动
+
+- 方法一：访问主板官网下载对应型号的驱动（含网卡、声卡、芯片组等）
+- 方法二：使用 Driver Booster 等驱动助手（需联网）
+
+### 🎮 2. 显卡驱动安装
+
+- NVIDIA 官网：[https://www.nvidia.com/Download/index.aspx?lang=cn](https://www.nvidia.com/Download/index.aspx?lang=cn)
+- AMD 官网：[https://www.amd.com/zh/support](https://www.amd.com/zh/support)
+
+---
+
+## 🧹 六、后续操作建议
+
+- 安装浏览器、输入法、常用工具（7-Zip、PotPlayer、WPS等）
+- 配置还原点 / 安装系统更新
+- 打开 TPM 和安全启动（用于 Windows 11）
+
+---
+
+## 🏁 总结
+
+🎉 现在你已经成功完成了一台从硬件到系统的完整装机流程！
+
+如果电脑无法开机，请检查：
+
+- 电源线是否接好  
+- 内存条是否插紧  
+- 显卡、电源是否点亮  
+- 主板是否有报警蜂鸣音  
+
+有任何问题，欢迎复查步骤或联系专业人士。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zmxf8.github.io/post/%F0%9F%92%BB%20-cong-ling-kai-shi-zhuang-yi-tai-zi-ji-de-dian-nao-%20-%20-chao-xiang-xi-zhuang-ji-jiao-cheng-%EF%BC%88-han-xi-tong-an-zhuang-%EF%BC%89.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/208015923?v=4">
+<title>💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）</h1>
+<div class="title-right">
+    <a href="https://zmxf8.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/ZMXF8/zmxf8.github.io/issues/7" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）</h1>
+<blockquote>
+<p>邮箱:<a href="mailto:zmxf-fxc@139.com">zmxf-fxc@139.com</a><br>
+更新时间：2025-06-10<br>
+适用人群：新手、小白、第一次组装电脑的朋友<br>
+本文将手把手教你如何从零开始组装一台电脑，并成功安装 Windows 系统</p>
+</blockquote>
+<hr>
+<h2>📦 一、你需要准备的东西</h2>
+<h3>🔧 工具准备</h3>
+<ul>
+<li>十字螺丝刀（必备）</li>
+<li>防静电手环（推荐）</li>
+<li>一张 U 盘（8GB 或以上）</li>
+<li>一张干净的桌子</li>
+<li>你的耐心与细心</li>
+</ul>
+<h3>🧱 硬件清单（中端配置示例）</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>组件</th>
+<th>建议型号/规格</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>AMD Ryzen 5 5600 / i5-12400</td>
+<td>中端处理器，适合办公/游戏</td>
+</tr>
+<tr>
+<td>主板</td>
+<td>B550 / B660</td>
+<td>选择与你的CPU兼容的接口</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>16GB (8GBx2) DDR4 3200MHz</td>
+<td>建议双通道</td>
+</tr>
+<tr>
+<td>显卡</td>
+<td>RTX 4060 / RX 7600</td>
+<td>如果玩游戏或剪辑必须要</td>
+</tr>
+<tr>
+<td>存储</td>
+<td>1TB NVMe M.2 SSD</td>
+<td>速度快，开机快</td>
+</tr>
+<tr>
+<td>电源</td>
+<td>550W 金牌全模组</td>
+<td>稳定可靠，有冗余</td>
+</tr>
+<tr>
+<td>机箱</td>
+<td>中塔 ATX</td>
+<td>注意是否能放下显卡/散热器</td>
+</tr>
+<tr>
+<td>散热器</td>
+<td>原装风冷或塔式风冷</td>
+<td>保证 CPU 温度控制</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>🧩 二、开始装机！安装步骤详解</h2>
+<h3>🧠 1. 安装 CPU</h3>
+<ol>
+<li>打开主板上的 CPU 插槽（抬起金属压杆）</li>
+<li>找到 CPU 上的金三角，对准主板上的标记</li>
+<li>垂直轻放下 CPU，不要用力按压</li>
+<li>压下金属压杆并扣上</li>
+</ol>
+<h3>🔥 2. 安装散热器</h3>
+<ul>
+<li>原装风冷：直接压上卡扣或螺丝固定</li>
+<li>第三方塔式风冷：别忘了涂抹硅脂（米粒大小），再拧螺丝固定</li>
+<li>最后把风扇电源线插入主板的 CPU_FAN 接口</li>
+</ul>
+<h3>🔋 3. 安装内存条</h3>
+<ol>
+<li>打开内存插槽两侧卡扣</li>
+<li>对准金手指缺口插入，均匀按下至“咔哒”一声</li>
+<li>优先使用双通道（按主板说明书插槽顺序）</li>
+</ol>
+<h3>💾 4. 安装 SSD（M.2）</h3>
+<ol>
+<li>找到主板的 M.2 插槽</li>
+<li>插入 SSD，轻微抬角插入</li>
+<li>按下并用螺丝固定</li>
+</ol>
+<h3>🖼️ 5. 安装主板到机箱</h3>
+<ol>
+<li>安装 IO 屏蔽挡板</li>
+<li>将主板对准 standoff 铜柱放好</li>
+<li>用螺丝固定主板，通常6-9颗</li>
+</ol>
+<h3>🎮 6. 安装显卡</h3>
+<ol>
+<li>拆掉机箱后部 PCI 挡板</li>
+<li>将显卡插入主板 PCIe x16 插槽</li>
+<li>用螺丝固定显卡尾部</li>
+<li>连接显卡电源（如有）</li>
+</ol>
+<h3>🔌 7. 连接所有电源线</h3>
+<ul>
+<li>24PIN 主板供电</li>
+<li>8PIN CPU供电</li>
+<li>显卡供电（如需要）</li>
+<li>SATA 或风扇供电线</li>
+<li>前置 IO（电源键、USB、音频）连接主板</li>
+</ul>
+<hr>
+<h2>⚙️ 三、BIOS 设置 &amp; 系统安装</h2>
+<h3>🚪 1. 进入 BIOS</h3>
+<ol>
+<li>启动电脑时反复按 <code class="notranslate">DEL</code> 或 <code class="notranslate">F2</code> 进入 BIOS</li>
+<li>检查以下设置：
+<ul>
+<li>时间、内存识别、CPU 型号是否正确</li>
+<li>设置启动顺序：将 U 盘设为第一启动项</li>
+<li>可启用 XMP 模式（提高内存频率）</li>
+</ul>
+</li>
+<li>保存设置并退出（F10）</li>
+</ol>
+<hr>
+<h2>💿 四、系统U盘制作与安装 Windows 11</h2>
+<h3>🧰 1. 制作系统启动 U 盘（Windows）</h3>
+<blockquote>
+<p>推荐使用微软官方工具：Media Creation Tool</p>
+</blockquote>
+<ul>
+<li>下载地址：<a href="https://www.microsoft.com/software-download/windows11" rel="nofollow">https://www.microsoft.com/software-download/windows11</a></li>
+<li>插入U盘（至少8GB）</li>
+<li>打开工具，选择“为另一台电脑创建安装介质”</li>
+<li>选择系统版本，制作完成后就是启动盘</li>
+</ul>
+<h3>🖥️ 2. 安装系统步骤</h3>
+<ol>
+<li>启动电脑，从U盘启动</li>
+<li>进入 Windows 安装界面后选择语言、版本</li>
+<li>自定义安装 &gt; 删除旧分区（如新盘会显示“未分配空间”）</li>
+<li>新建分区并点击“下一步”安装</li>
+<li>安装完自动重启进入桌面</li>
+</ol>
+<hr>
+<h2>🧰 五、驱动程序安装</h2>
+<h3>🚗 1. 下载主板驱动</h3>
+<ul>
+<li>方法一：访问主板官网下载对应型号的驱动（含网卡、声卡、芯片组等）</li>
+<li>方法二：使用 Driver Booster 等驱动助手（需联网）</li>
+</ul>
+<h3>🎮 2. 显卡驱动安装</h3>
+<ul>
+<li>NVIDIA 官网：<a href="https://www.nvidia.com/Download/index.aspx?lang=cn" rel="nofollow">https://www.nvidia.com/Download/index.aspx?lang=cn</a></li>
+<li>AMD 官网：<a href="https://www.amd.com/zh/support" rel="nofollow">https://www.amd.com/zh/support</a></li>
+</ul>
+<hr>
+<h2>🧹 六、后续操作建议</h2>
+<ul>
+<li>安装浏览器、输入法、常用工具（7-Zip、PotPlayer、WPS等）</li>
+<li>配置还原点 / 安装系统更新</li>
+<li>打开 TPM 和安全启动（用于 Windows 11）</li>
+</ul>
+<hr>
+<h2>🏁 总结</h2>
+<p>🎉 现在你已经成功完成了一台从硬件到系统的完整装机流程！</p>
+<p>如果电脑无法开机，请检查：</p>
+<ul>
+<li>电源线是否接好</li>
+<li>内存条是否插紧</li>
+<li>显卡、电源是否点亮</li>
+<li>主板是否有报警蜂鸣音</li>
+</ul>
+<p>有任何问题，欢迎复查步骤或联系专业人士。祝你装机愉快！</p>
+<hr>
+<blockquote>
+<p>✍️ 如果你觉得这份教程有帮助，不妨收藏分享给朋友，也可以为它加一颗 ⭐</p>
+</blockquote></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://zmxf8.github.io">ZMXF科技</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","ZMXF8/zmxf8.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>

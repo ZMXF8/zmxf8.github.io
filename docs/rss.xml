@@ -1,5 +1,155 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ZMXF科技</title><link>https://zmxf8.github.io</link><description>ZMXF</description><copyright>ZMXF科技</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/208015923?v=4</url><title>avatar</title><link>https://zmxf8.github.io</link></image><lastBuildDate>Mon, 09 Jun 2025 10:14:15 +0000</lastBuildDate><managingEditor>ZMXF科技</managingEditor><ttl>60</ttl><webMaster>ZMXF科技</webMaster><item><title>永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</title><link>https://zmxf8.github.io/post/yong-jiu-mian-fei-%E3%80%81-duo-jie-dian-VPN%21%20%20CloudflareWorker-ji-su-da-jian-%EF%BC%8C-you-xuan-IP%E3%80%81-miao-kai-_%204K-8K%EF%BC%8C-jie-suo-ChatGPT%2C-bu-xian-liu-liang-%EF%BC%81.html</link><description>  今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ZMXF科技</title><link>https://zmxf8.github.io</link><description>ZMXF</description><copyright>ZMXF科技</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/208015923?v=4</url><title>avatar</title><link>https://zmxf8.github.io</link></image><lastBuildDate>Tue, 10 Jun 2025 08:29:17 +0000</lastBuildDate><managingEditor>ZMXF科技</managingEditor><ttl>60</ttl><webMaster>ZMXF科技</webMaster><item><title>💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）</title><link>https://zmxf8.github.io/post/%F0%9F%92%BB%20-cong-ling-kai-shi-zhuang-yi-tai-zi-ji-de-dian-nao-%20-%20-chao-xiang-xi-zhuang-ji-jiao-cheng-%EF%BC%88-han-xi-tong-an-zhuang-%EF%BC%89.html</link><description># 💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）
+&gt;邮箱:zmxf-fxc@139.com
+&gt; 更新时间：2025-06-10  
+&gt; 适用人群：新手、小白、第一次组装电脑的朋友  
+&gt; 本文将手把手教你如何从零开始组装一台电脑，并成功安装 Windows 系统
+
+---
+
+## 📦 一、你需要准备的东西
+
+### 🔧 工具准备
+
+- 十字螺丝刀（必备）
+- 防静电手环（推荐）
+- 一张 U 盘（8GB 或以上）
+- 一张干净的桌子
+- 你的耐心与细心
+
+### 🧱 硬件清单（中端配置示例）
+
+| 组件     | 建议型号/规格              | 说明                           |
+|----------|----------------------------|--------------------------------|
+| CPU      | AMD Ryzen 5 5600 / i5-12400 | 中端处理器，适合办公/游戏      |
+| 主板     | B550 / B660                | 选择与你的CPU兼容的接口        |
+| 内存     | 16GB (8GBx2) DDR4 3200MHz  | 建议双通道                     |
+| 显卡     | RTX 4060 / RX 7600         | 如果玩游戏或剪辑必须要         |
+| 存储     | 1TB NVMe M.2 SSD           | 速度快，开机快                  |
+| 电源     | 550W 金牌全模组            | 稳定可靠，有冗余               |
+| 机箱     | 中塔 ATX                   | 注意是否能放下显卡/散热器      |
+| 散热器   | 原装风冷或塔式风冷         | 保证 CPU 温度控制               |
+
+---
+
+## 🧩 二、开始装机！安装步骤详解
+
+### 🧠 1. 安装 CPU
+
+1. 打开主板上的 CPU 插槽（抬起金属压杆）
+2. 找到 CPU 上的金三角，对准主板上的标记
+3. 垂直轻放下 CPU，不要用力按压
+4. 压下金属压杆并扣上
+
+### 🔥 2. 安装散热器
+
+- 原装风冷：直接压上卡扣或螺丝固定
+- 第三方塔式风冷：别忘了涂抹硅脂（米粒大小），再拧螺丝固定
+- 最后把风扇电源线插入主板的 CPU_FAN 接口
+
+### 🔋 3. 安装内存条
+
+1. 打开内存插槽两侧卡扣
+2. 对准金手指缺口插入，均匀按下至“咔哒”一声
+3. 优先使用双通道（按主板说明书插槽顺序）
+
+### 💾 4. 安装 SSD（M.2）
+
+1. 找到主板的 M.2 插槽
+2. 插入 SSD，轻微抬角插入
+3. 按下并用螺丝固定
+
+### 🖼️ 5. 安装主板到机箱
+
+1. 安装 IO 屏蔽挡板
+2. 将主板对准 standoff 铜柱放好
+3. 用螺丝固定主板，通常6-9颗
+
+### 🎮 6. 安装显卡
+
+1. 拆掉机箱后部 PCI 挡板
+2. 将显卡插入主板 PCIe x16 插槽
+3. 用螺丝固定显卡尾部
+4. 连接显卡电源（如有）
+
+### 🔌 7. 连接所有电源线
+
+- 24PIN 主板供电
+- 8PIN CPU供电
+- 显卡供电（如需要）
+- SATA 或风扇供电线
+- 前置 IO（电源键、USB、音频）连接主板
+
+---
+
+## ⚙️ 三、BIOS 设置 &amp; 系统安装
+
+### 🚪 1. 进入 BIOS
+
+1. 启动电脑时反复按 `DEL` 或 `F2` 进入 BIOS
+2. 检查以下设置：
+   - 时间、内存识别、CPU 型号是否正确
+   - 设置启动顺序：将 U 盘设为第一启动项
+   - 可启用 XMP 模式（提高内存频率）
+3. 保存设置并退出（F10）
+
+---
+
+## 💿 四、系统U盘制作与安装 Windows 11
+
+### 🧰 1. 制作系统启动 U 盘（Windows）
+
+&gt; 推荐使用微软官方工具：Media Creation Tool
+
+- 下载地址：[https://www.microsoft.com/software-download/windows11](https://www.microsoft.com/software-download/windows11)
+- 插入U盘（至少8GB）
+- 打开工具，选择“为另一台电脑创建安装介质”
+- 选择系统版本，制作完成后就是启动盘
+
+### 🖥️ 2. 安装系统步骤
+
+1. 启动电脑，从U盘启动
+2. 进入 Windows 安装界面后选择语言、版本
+3. 自定义安装 &gt; 删除旧分区（如新盘会显示“未分配空间”）
+4. 新建分区并点击“下一步”安装
+5. 安装完自动重启进入桌面
+
+---
+
+## 🧰 五、驱动程序安装
+
+### 🚗 1. 下载主板驱动
+
+- 方法一：访问主板官网下载对应型号的驱动（含网卡、声卡、芯片组等）
+- 方法二：使用 Driver Booster 等驱动助手（需联网）
+
+### 🎮 2. 显卡驱动安装
+
+- NVIDIA 官网：[https://www.nvidia.com/Download/index.aspx?lang=cn](https://www.nvidia.com/Download/index.aspx?lang=cn)
+- AMD 官网：[https://www.amd.com/zh/support](https://www.amd.com/zh/support)
+
+---
+
+## 🧹 六、后续操作建议
+
+- 安装浏览器、输入法、常用工具（7-Zip、PotPlayer、WPS等）
+- 配置还原点 / 安装系统更新
+- 打开 TPM 和安全启动（用于 Windows 11）
+
+---
+
+## 🏁 总结
+
+🎉 现在你已经成功完成了一台从硬件到系统的完整装机流程！
+
+如果电脑无法开机，请检查：
+
+- 电源线是否接好  
+- 内存条是否插紧  
+- 显卡、电源是否点亮  
+- 主板是否有报警蜂鸣音  
+
+有任何问题，欢迎复查步骤或联系专业人士。</description><guid isPermaLink="true">https://zmxf8.github.io/post/%F0%9F%92%BB%20-cong-ling-kai-shi-zhuang-yi-tai-zi-ji-de-dian-nao-%20-%20-chao-xiang-xi-zhuang-ji-jiao-cheng-%EF%BC%88-han-xi-tong-an-zhuang-%EF%BC%89.html</guid><pubDate>Tue, 10 Jun 2025 08:28:46 +0000</pubDate></item><item><title>永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</title><link>https://zmxf8.github.io/post/yong-jiu-mian-fei-%E3%80%81-duo-jie-dian-VPN%21%20%20CloudflareWorker-ji-su-da-jian-%EF%BC%8C-you-xuan-IP%E3%80%81-miao-kai-_%204K-8K%EF%BC%8C-jie-suo-ChatGPT%2C-bu-xian-liu-liang-%EF%BC%81.html</link><description>  今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！
 
 ![Image](https://github.com/user-attachments/assets/3e3be5fc-6844-4d62-9da3-e79d02e92d00)
 
