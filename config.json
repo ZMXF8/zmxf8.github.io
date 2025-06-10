@@ -4,5 +4,10 @@
     "avatarUrl":"https://avatars.githubusercontent.com/u/208015923?v=4",
     "email":"zmxf-fxc@139.com",
     "startSite":"06/30/2009",
+    "commentLabelColor":"#006b75",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "i18n":"CN",
+    "UTC":8,
+    "ogImage":"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg",
     "GMEEK_VERSION":"last"
 }
