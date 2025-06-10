@@ -12,8 +12,6 @@
 4. 注册一个免费的域名，可以使用零度解说前几期介绍的注册方法，来获取你自己的免费域名[点击前往](https://www.freedidi.com/17434.html)
 
 5. 如果想获得更多的优质节点，那么推荐使用IP优选网站或优选工具进行获取！[点击前往](https://www.freedidi.com/10143.html)
-### 视频教程[点击前往](https://youtu.be/DYGu71OaqGI?si=rFiCoTsUYMiSBIPH)
-详细教程[点击](https://www.freedidi.com/)搜索标题。
 > [警告⚠️]
 > 仅限海外用户使用，大陆用户切勿使用（可能违法），别给站长找麻烦！！
 
