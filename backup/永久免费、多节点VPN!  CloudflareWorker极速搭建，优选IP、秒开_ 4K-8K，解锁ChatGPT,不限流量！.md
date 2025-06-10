@@ -9,11 +9,11 @@
 ## 获取Cloudflare 的 worker 开源代码
 加密版 [点击获取](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)
 明文版 [点击获取](https://github.com/cmliu/edgetunnel/blob/main/%E6%98%8E%E6%96%87%E6%BA%90%E7%A0%81.js)
-### 重要声明：仅限海外用户使用，大陆用户切勿使用（可能违法），别给站长找麻烦！！
-
 4. 注册一个免费的域名，可以使用零度解说前几期介绍的注册方法，来获取你自己的免费域名[点击前往](https://www.freedidi.com/17434.html)
 
 5. 如果想获得更多的优质节点，那么推荐使用IP优选网站或优选工具进行获取！[点击前往](https://www.freedidi.com/10143.html)
 ### 视频教程[点击前往](https://youtu.be/DYGu71OaqGI?si=rFiCoTsUYMiSBIPH)
 详细教程[点击](https://www.freedidi.com/)搜索标题。
-### 警告:仅限海外用户使用，大陆用户切勿使用（可能违法），别给站长找麻烦！！
+> [警告⚠️]
+> 仅限海外用户使用，大陆用户切勿使用（可能违法），别给站长找麻烦！！
+
