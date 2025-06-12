@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/208015923?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="> [!TIP]
+> 🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）
+
+> 本教程将一步步教你如何用本地设备（树莓派、旧电脑、NUC 等）搭建 Home Assistant 智能家居平台，并成功接入小米设备，实现真正的局域网离线智能控制！
+
+---
+
+## 🧰 一、准备条件
+
+### 📦 硬件准备（任选其一）：
+
+- 树莓派 3B/4 + 16GB TF 卡 + USB 电源
+- 或 旧笔记本/台式机（建议2G RAM以上）
+- 或 x86 设备（如 Intel NUC、小主机）
+
+### 🌐 网络要求：
+
+- 上述设备必须与小米设备在**同一局域网**
+- 建议固定 IP 或使用局域网 DHCP 保持 IP 不变
+
+### 🛠️ 工具准备：
+
+- Balena Etcher（烧录系统）
+- 可用显示器和键盘（或 SSH）
+
+---
+
+## 🚀 二、安装 Home Assistant
+
+### 方法 A：推荐方式（安装 Home Assistant OS）
+
+> 适用于树莓派、NUC、旧电脑（全盘写入）
+
+1. 下载对应平台的 [Home Assistant 镜像](https://www.home-assistant.io/installation/)
+2. 使用 Balena Etcher 烧录到 SD 卡或 U 盘
+3. 插入设备后开机，等待 10 分钟
+4. 在浏览器访问：`http://homeassistant.local:8123`（或用 IP 访问）
+
+### 方法 B：Docker 安装（适用于 Ubuntu 本地电脑）
+
+```bash
+sudo apt update
+sudo apt install -y docker.io
+sudo docker run -d --name homeassistant \
+  --privileged \
+  --restart=unless-stopped \
+  -v /home/user/homeassistant:/config \
+  -e TZ=Asia/Shanghai \
+  -p 8123:8123 \
+  ghcr.io/home-assistant/home-assistant:stable
+```
+
+启动后访问 `http://你的IP:8123`
+
+---
+
+## 🔑 三、首次启动与配置
+
+1. 打开浏览器访问 `http://你的IP:8123`
+2. 创建管理员账号
+3. 设置时区、语言、位置（建议：中国/上海）
+4. 如果局域网中已有米家设备，HA 会自动发现部分设备（如支持局域网协议的插座/灯）
+
+---
+
+## 🔌 四、接入米家（小米）设备
+
+### 方法一：接入 **支持局域网控制** 的米家设备
+
+常见设备包括：
+
+- 米家智能插座（Zigbee/WiFi）
+- 米家灯泡
+- 小米网关 v3（支持局域网开发）
+- 空调伴侣2
+
+#### 步骤如下：
+
+1. 打开米家 App → 进入设备 → 右上角「...」→ 查看设备信息
+2. 如果显示「局域网通信协议」或「Token」，记录下来
+3. 在 Home Assistant 配置文件中添加：
+
+```yaml
+# configuration.yaml
+xiaomi_miio:
+  gateways:
+    - host: 192.168.1.100
+      token: your_device_token
+```
+
+4. 重启 Home Assistant，设备将出现在集成中
+
+---
+
+### 方法二：使用插件「Xiaomi Miot Auto」
+
+支持更多设备（如扫地机、空调伴侣、电饭煲等）
+
+1. 安装 HACS（社区插件商店）：
+   - 进入 HA → 添加 HACS 插件仓库：https://hacs.xyz
+2. 在 HACS 中搜索并安装 `Xiaomi Miot Auto`
+3. 安装完成后，Home Assistant 左侧栏点击「设置」→「设备与服务」→ 添加 `Xiaomi Miot Auto`
+4. 登录小米账号，导入设备
+
+⚠️ 该方式需要**一次性云端登录小米账号**，之后可离线控制大部分设备
+
+---
+
+## 💡 五、自动化示例
+
+例如：每天早上 7 点自动打开客厅灯
+
+```yaml
+automation:
+  - alias: '早上开灯'
+    trigger:
+      - platform: time
+        at: '07:00:00'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.mi_light_1
+```
+
+---
+
+## 📱 六、安装 App 控制
+
+推荐使用 Home Assistant 官方 App：
+
+- 安卓：可从 Play 商店或官网下载 APK
+- iOS：App Store 搜索 “Home Assistant”
+
+可实现远程通知、本地控制、小组件操作等
+
+---
+
+## 🔐 七、安全建议
+
+- 设置强密码，避免局域网攻击
+- 开启 HTTPS（使用 Let’s Encrypt + DuckDNS）
+- 启用 MFA（双重身份验证）
+
+---
+
+## ✅ 八、总结
+
+通过本教程，你学会了如何在本地设备上部署 Home Assistant，并接入小米设备构建智能家居中心。">
+<meta property="og:title" content="🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）">
+<meta property="og:description" content="> [!TIP]
+> 🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）
+
+> 本教程将一步步教你如何用本地设备（树莓派、旧电脑、NUC 等）搭建 Home Assistant 智能家居平台，并成功接入小米设备，实现真正的局域网离线智能控制！
+
+---
+
+## 🧰 一、准备条件
+
+### 📦 硬件准备（任选其一）：
+
+- 树莓派 3B/4 + 16GB TF 卡 + USB 电源
+- 或 旧笔记本/台式机（建议2G RAM以上）
+- 或 x86 设备（如 Intel NUC、小主机）
+
+### 🌐 网络要求：
+
+- 上述设备必须与小米设备在**同一局域网**
+- 建议固定 IP 或使用局域网 DHCP 保持 IP 不变
+
+### 🛠️ 工具准备：
+
+- Balena Etcher（烧录系统）
+- 可用显示器和键盘（或 SSH）
+
+---
+
+## 🚀 二、安装 Home Assistant
+
+### 方法 A：推荐方式（安装 Home Assistant OS）
+
+> 适用于树莓派、NUC、旧电脑（全盘写入）
+
+1. 下载对应平台的 [Home Assistant 镜像](https://www.home-assistant.io/installation/)
+2. 使用 Balena Etcher 烧录到 SD 卡或 U 盘
+3. 插入设备后开机，等待 10 分钟
+4. 在浏览器访问：`http://homeassistant.local:8123`（或用 IP 访问）
+
+### 方法 B：Docker 安装（适用于 Ubuntu 本地电脑）
+
+```bash
+sudo apt update
+sudo apt install -y docker.io
+sudo docker run -d --name homeassistant \
+  --privileged \
+  --restart=unless-stopped \
+  -v /home/user/homeassistant:/config \
+  -e TZ=Asia/Shanghai \
+  -p 8123:8123 \
+  ghcr.io/home-assistant/home-assistant:stable
+```
+
+启动后访问 `http://你的IP:8123`
+
+---
+
+## 🔑 三、首次启动与配置
+
+1. 打开浏览器访问 `http://你的IP:8123`
+2. 创建管理员账号
+3. 设置时区、语言、位置（建议：中国/上海）
+4. 如果局域网中已有米家设备，HA 会自动发现部分设备（如支持局域网协议的插座/灯）
+
+---
+
+## 🔌 四、接入米家（小米）设备
+
+### 方法一：接入 **支持局域网控制** 的米家设备
+
+常见设备包括：
+
+- 米家智能插座（Zigbee/WiFi）
+- 米家灯泡
+- 小米网关 v3（支持局域网开发）
+- 空调伴侣2
+
+#### 步骤如下：
+
+1. 打开米家 App → 进入设备 → 右上角「...」→ 查看设备信息
+2. 如果显示「局域网通信协议」或「Token」，记录下来
+3. 在 Home Assistant 配置文件中添加：
+
+```yaml
+# configuration.yaml
+xiaomi_miio:
+  gateways:
+    - host: 192.168.1.100
+      token: your_device_token
+```
+
+4. 重启 Home Assistant，设备将出现在集成中
+
+---
+
+### 方法二：使用插件「Xiaomi Miot Auto」
+
+支持更多设备（如扫地机、空调伴侣、电饭煲等）
+
+1. 安装 HACS（社区插件商店）：
+   - 进入 HA → 添加 HACS 插件仓库：https://hacs.xyz
+2. 在 HACS 中搜索并安装 `Xiaomi Miot Auto`
+3. 安装完成后，Home Assistant 左侧栏点击「设置」→「设备与服务」→ 添加 `Xiaomi Miot Auto`
+4. 登录小米账号，导入设备
+
+⚠️ 该方式需要**一次性云端登录小米账号**，之后可离线控制大部分设备
+
+---
+
+## 💡 五、自动化示例
+
+例如：每天早上 7 点自动打开客厅灯
+
+```yaml
+automation:
+  - alias: '早上开灯'
+    trigger:
+      - platform: time
+        at: '07:00:00'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.mi_light_1
+```
+
+---
+
+## 📱 六、安装 App 控制
+
+推荐使用 Home Assistant 官方 App：
+
+- 安卓：可从 Play 商店或官网下载 APK
+- iOS：App Store 搜索 “Home Assistant”
+
+可实现远程通知、本地控制、小组件操作等
+
+---
+
+## 🔐 七、安全建议
+
+- 设置强密码，避免局域网攻击
+- 开启 HTTPS（使用 Let’s Encrypt + DuckDNS）
+- 启用 MFA（双重身份验证）
+
+---
+
+## ✅ 八、总结
+
+通过本教程，你学会了如何在本地设备上部署 Home Assistant，并接入小米设备构建智能家居中心。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zmxf8.github.io/post/%F0%9F%8F%A0%20-yong-jiu-dian-nao-huo-shu-mei-pai-bu-shu-%20Home%20Assistant%20-bing-jie-ru-mi-jia-she-bei-%EF%BC%88-li-xian-ben-di-hua-jiao-cheng-%EF%BC%89.html">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
+<title>🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）</h1>
+<div class="title-right">
+    <a href="https://zmxf8.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/ZMXF8/zmxf8.github.io/issues/11" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）</p>
+</div>
+<blockquote>
+<p>本教程将一步步教你如何用本地设备（树莓派、旧电脑、NUC 等）搭建 Home Assistant 智能家居平台，并成功接入小米设备，实现真正的局域网离线智能控制！</p>
+</blockquote>
+<hr>
+<h2>🧰 一、准备条件</h2>
+<h3>📦 硬件准备（任选其一）：</h3>
+<ul>
+<li>树莓派 3B/4 + 16GB TF 卡 + USB 电源</li>
+<li>或 旧笔记本/台式机（建议2G RAM以上）</li>
+<li>或 x86 设备（如 Intel NUC、小主机）</li>
+</ul>
+<h3>🌐 网络要求：</h3>
+<ul>
+<li>上述设备必须与小米设备在<strong>同一局域网</strong></li>
+<li>建议固定 IP 或使用局域网 DHCP 保持 IP 不变</li>
+</ul>
+<h3>🛠️ 工具准备：</h3>
+<ul>
+<li>Balena Etcher（烧录系统）</li>
+<li>可用显示器和键盘（或 SSH）</li>
+</ul>
+<hr>
+<h2>🚀 二、安装 Home Assistant</h2>
+<h3>方法 A：推荐方式（安装 Home Assistant OS）</h3>
+<blockquote>
+<p>适用于树莓派、NUC、旧电脑（全盘写入）</p>
+</blockquote>
+<ol>
+<li>下载对应平台的 <a href="https://www.home-assistant.io/installation/" rel="nofollow">Home Assistant 镜像</a></li>
+<li>使用 Balena Etcher 烧录到 SD 卡或 U 盘</li>
+<li>插入设备后开机，等待 10 分钟</li>
+<li>在浏览器访问：<code class="notranslate">http://homeassistant.local:8123</code>（或用 IP 访问）</li>
+</ol>
+<h3>方法 B：Docker 安装（适用于 Ubuntu 本地电脑）</h3>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo apt update
+sudo apt install -y docker.io
+sudo docker run -d --name homeassistant \
+  --privileged \
+  --restart=unless-stopped \
+  -v /home/user/homeassistant:/config \
+  -e TZ=Asia/Shanghai \
+  -p 8123:8123 \
+  ghcr.io/home-assistant/home-assistant:stable</pre></div>
+<p>启动后访问 <code class="notranslate">http://你的IP:8123</code></p>
+<hr>
+<h2>🔑 三、首次启动与配置</h2>
+<ol>
+<li>打开浏览器访问 <code class="notranslate">http://你的IP:8123</code></li>
+<li>创建管理员账号</li>
+<li>设置时区、语言、位置（建议：中国/上海）</li>
+<li>如果局域网中已有米家设备，HA 会自动发现部分设备（如支持局域网协议的插座/灯）</li>
+</ol>
+<hr>
+<h2>🔌 四、接入米家（小米）设备</h2>
+<h3>方法一：接入 <strong>支持局域网控制</strong> 的米家设备</h3>
+<p>常见设备包括：</p>
+<ul>
+<li>米家智能插座（Zigbee/WiFi）</li>
+<li>米家灯泡</li>
+<li>小米网关 v3（支持局域网开发）</li>
+<li>空调伴侣2</li>
+</ul>
+<h4>步骤如下：</h4>
+<ol>
+<li>打开米家 App → 进入设备 → 右上角「...」→ 查看设备信息</li>
+<li>如果显示「局域网通信协议」或「Token」，记录下来</li>
+<li>在 Home Assistant 配置文件中添加：</li>
+</ol>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> configuration.yaml</span>
+<span class="pl-ent">xiaomi_miio</span>:
+  <span class="pl-ent">gateways</span>:
+    - <span class="pl-ent">host</span>: <span class="pl-s">192.168.1.100</span>
+      <span class="pl-ent">token</span>: <span class="pl-s">your_device_token</span></pre></div>
+<ol start="4">
+<li>重启 Home Assistant，设备将出现在集成中</li>
+</ol>
+<hr>
+<h3>方法二：使用插件「Xiaomi Miot Auto」</h3>
+<p>支持更多设备（如扫地机、空调伴侣、电饭煲等）</p>
+<ol>
+<li>安装 HACS（社区插件商店）：
+<ul>
+<li>进入 HA → 添加 HACS 插件仓库：<a href="https://hacs.xyz" rel="nofollow">https://hacs.xyz</a></li>
+</ul>
+</li>
+<li>在 HACS 中搜索并安装 <code class="notranslate">Xiaomi Miot Auto</code></li>
+<li>安装完成后，Home Assistant 左侧栏点击「设置」→「设备与服务」→ 添加 <code class="notranslate">Xiaomi Miot Auto</code></li>
+<li>登录小米账号，导入设备</li>
+</ol>
+<p><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji> 该方式需要<strong>一次性云端登录小米账号</strong>，之后可离线控制大部分设备</p>
+<hr>
+<h2>💡 五、自动化示例</h2>
+<p>例如：每天早上 7 点自动打开客厅灯</p>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">automation</span>:
+  - <span class="pl-ent">alias</span>: <span class="pl-s"><span class="pl-pds">'</span>早上开灯<span class="pl-pds">'</span></span>
+    <span class="pl-ent">trigger</span>:
+      - <span class="pl-ent">platform</span>: <span class="pl-s">time</span>
+        <span class="pl-ent">at</span>: <span class="pl-s"><span class="pl-pds">"</span>07:00:00<span class="pl-pds">"</span></span>
+    <span class="pl-ent">action</span>:
+      - <span class="pl-ent">service</span>: <span class="pl-s">switch.turn_on</span>
+        <span class="pl-ent">entity_id</span>: <span class="pl-s">switch.mi_light_1</span></pre></div>
+<hr>
+<h2>📱 六、安装 App 控制</h2>
+<p>推荐使用 Home Assistant 官方 App：</p>
+<ul>
+<li>安卓：可从 Play 商店或官网下载 APK</li>
+<li>iOS：App Store 搜索 “Home Assistant”</li>
+</ul>
+<p>可实现远程通知、本地控制、小组件操作等</p>
+<hr>
+<h2>🔐 七、安全建议</h2>
+<ul>
+<li>设置强密码，避免局域网攻击</li>
+<li>开启 HTTPS（使用 Let’s Encrypt + DuckDNS）</li>
+<li>启用 MFA（双重身份验证）</li>
+</ul>
+<hr>
+<h2>✅ 八、总结</h2>
+<p>通过本教程，你学会了如何在本地设备上部署 Home Assistant，并接入小米设备构建智能家居中心。与云平台相比，Home Assistant 更加安全、高效、可扩展，无需依赖外网和广告。</p>
+<p>欢迎尝试更多组件如：</p>
+<ul>
+<li>Zigbee2MQTT（搭配 CC2652P）</li>
+<li>ESPHome（自制设备）</li>
+<li>Node-RED（可视化自动化流程）</li>
+</ul>
+<p>🌟 打造真正属于你自己的智能家！</p>
+<hr></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://zmxf8.github.io">ZMXF科技</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("06/30/2009"!=""){
+    var startSite=new Date("06/30/2009");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","ZMXF8/zmxf8.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>
