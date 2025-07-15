@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ZMXF科技</title><link>https://zmxf8.github.io</link><description>ZMXF</description><copyright>ZMXF科技</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/208015923?v=4</url><title>avatar</title><link>https://zmxf8.github.io</link></image><lastBuildDate>Tue, 15 Jul 2025 00:27:07 +0000</lastBuildDate><managingEditor>ZMXF科技</managingEditor><ttl>60</ttl><webMaster>ZMXF科技</webMaster><item><title>中国移动宽带诉求</title><link>https://zmxf8.github.io/post/zhong-guo-yi-dong-kuan-dai-su-qiu.html</link><description># 中国移动宽带服务正式投诉函（陕西省商洛市专用）
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ZMXF科技</title><link>https://zmxf8.github.io</link><description>ZMXF</description><copyright>ZMXF科技</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/208015923?v=4</url><title>avatar</title><link>https://zmxf8.github.io</link></image><lastBuildDate>Tue, 15 Jul 2025 00:30:52 +0000</lastBuildDate><managingEditor>ZMXF科技</managingEditor><ttl>60</ttl><webMaster>ZMXF科技</webMaster><item><title>中国移动宽带诉求</title><link>https://zmxf8.github.io/post/zhong-guo-yi-dong-kuan-dai-su-qiu.html</link><description># 中国移动宽带服务正式投诉函（陕西省商洛市专用）
 
 ## 一、投诉人信息
 **姓名**：付星晨  
@@ -19,7 +19,7 @@
 
 ### 2. 副宽带光猫（2019年部署）
 **问题描述**：超期服役设备未更换（强制报废年限已到）  
-- **型号**：烽火H2-3（GPON）  
+- **型号** 吉比特H2-3（GPON）  
 - **序列号**：E4C0CC33DC72  
 - **违规事实**：违反《电信设备维护规程》YD/T 1717-2019第7条  
 - **证据照片**：[插入图2：副光猫生产日期特写]  
