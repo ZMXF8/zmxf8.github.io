@@ -29,7 +29,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <style>
 .avatar {transition: 0.8s;width:64px;height:64px;object-fit: cover;}
 .avatar:hover{transform: scale(1.15) rotate(360deg);}
-#header h1 a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-family:Monaco;margin-left:8px;}
+.title-left a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-weight: bold;font-family:Monaco;margin-left:8px;}
 .title-right{display:flex;margin:auto 0 0 auto;}
 .title-right button{margin-right:8px;padding:16px;}
 .title-right .circle{padding: 14px 16px;}
@@ -55,8 +55,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1>
-    <img src="https://avatars.githubusercontent.com/u/208015923?v=4" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">ZMXF科技</a></h1>
+<div class="title-left">
+    <img src="https://avatars.githubusercontent.com/u/208015923?v=4" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">ZMXF科技</a></div>
 <div class="title-right">
     <a href="https://zmxf8.github.io/tag.html" id="buttonSearch" class="btn btn-invisible circle" title="搜索">
         <svg class="octicon" width="16" height="16" >
@@ -80,9 +80,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div style="margin-bottom: 16px;">ZMXF</div>
 <nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/%F0%9F%8F%A0%20-yong-jiu-dian-nao-huo-shu-mei-pai-bu-shu-%20Home%20Assistant%20-bing-jie-ru-mi-jia-she-bei-%EF%BC%88-li-xian-ben-di-hua-jiao-cheng-%EF%BC%89.html">
+<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/zmxf.qzz.io-zmxf.dpdns.org.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
+        </svg>
+        <span class="listTitle">zmxf.qzz.io/zmxf.dpdns.org</span>
+    </div>
+    <div class="listLabels">
+        
+        <span class="Label LabelName" style="background-color:#1D76DB"><object><a style="color:#fff" href="tag.html#文档">文档</a></object></span>
+        <span class="Label LabelTime" style="background-color:#1f883d">2026-03-23</span>
+    </div>
+</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/%F0%9F%8F%A0%20-yong-jiu-dian-nao-huo-shu-mei-pai-bu-shu-%20Home%20Assistant%20-bing-jie-ru-mi-jia-she-bei-%EF%BC%88-li-xian-ben-di-hua-jiao-cheng-%EF%BC%89.html">
+    <div class="d-flex flex-items-center">
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">🏠 用旧电脑或树莓派部署 Home Assistant 并接入米家设备（离线本地化教程）</span>
     </div>
@@ -93,7 +104,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/li-yong-jiu-dian-nao-huo-yun-fu-wu-qi-an-zhuang-%201Panel%20-mian-ban-bing-da-jian-wang-zhan-%EF%BC%88-xiang-xi-jiao-cheng-%EF%BC%89.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">利用旧电脑或云服务器安装 1Panel 面板并搭建网站（详细教程）</span>
     </div>
@@ -104,7 +115,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/Post-gong-ji-ce-shi.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">Post攻击测试</span>
     </div>
@@ -115,7 +126,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/bu-tong-yu-suan-zhuang-ji-qing-dan.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">不同预算装机清单</span>
     </div>
@@ -126,7 +137,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/%F0%9F%92%BB%20-cong-ling-kai-shi-zhuang-yi-tai-zi-ji-de-dian-nao-%20-%20-chao-xiang-xi-zhuang-ji-jiao-cheng-%EF%BC%88-han-xi-tong-an-zhuang-%EF%BC%89.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">💻 从零开始装一台自己的电脑 | 超详细装机教程（含系统安装）</span>
     </div>
@@ -137,7 +148,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/yong-jiu-mian-fei-%E3%80%81-duo-jie-dian-VPN%21%20%20CloudflareWorker-ji-su-da-jian-%EF%BC%8C-you-xuan-IP%E3%80%81-miao-kai-_%204K-8K%EF%BC%8C-jie-suo-ChatGPT%2C-bu-xian-liu-liang-%EF%BC%81.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</span>
     </div>
@@ -148,7 +159,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/dai-ma-ru-he-fu-neng-xian-shi-shi-jie-%EF%BC%8C-da-kai-zhi-neng-jiao-hu-xin-pian-zhang.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">代码如何赋能现实世界，打开智能交互新篇章</span>
     </div>
@@ -159,7 +170,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/bi-zhi-fen-xiang.html">
     <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        <svg class="SideNav-icon octicon" style="width:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
         <span class="listTitle">壁纸分享</span>
     </div>
@@ -184,7 +195,7 @@ if("06/30/2009"!=""){
     var startSite=new Date("06/30/2009");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>

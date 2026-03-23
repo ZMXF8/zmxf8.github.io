@@ -10,25 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="  今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！
-
-![Image](https://github.com/user-attachments/assets/3e3be5fc-6844-4d62-9da3-e79d02e92d00)
-
-1. 首先你得先注册个cloudflare账号[点击前往](https://dash.cloudflare.com/sign-up)
-2. 接着你需要准备好开源软件：V2rayN，因为一会要用到[立即下载](https://github.com/2dust/v2rayN)
-3. 在Cloudflare 上创建worker，并填写下面的代码，这个代码来自CM在【 [Github](https://github.com/cmliu/edgetunnel?tab=readme-ov-file) 】社区的开源项目，代码已经内置IP优选和代理功能，自带动态的UUID，可以大大减少手动配置过程，非常适合新手和特殊用户。">
-<meta property="og:title" content="永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！">
-<meta property="og:description" content="  今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！
-
-![Image](https://github.com/user-attachments/assets/3e3be5fc-6844-4d62-9da3-e79d02e92d00)
-
-1. 首先你得先注册个cloudflare账号[点击前往](https://dash.cloudflare.com/sign-up)
-2. 接着你需要准备好开源软件：V2rayN，因为一会要用到[立即下载](https://github.com/2dust/v2rayN)
-3. 在Cloudflare 上创建worker，并填写下面的代码，这个代码来自CM在【 [Github](https://github.com/cmliu/edgetunnel?tab=readme-ov-file) 】社区的开源项目，代码已经内置IP优选和代理功能，自带动态的UUID，可以大大减少手动配置过程，非常适合新手和特殊用户。">
+<meta name="description" content="标题官网。">
+<meta property="og:title" content="zmxf.qzz.io/zmxf.dpdns.org">
+<meta property="og:description" content="标题官网。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://zmxf8.github.io/post/yong-jiu-mian-fei-%E3%80%81-duo-jie-dian-VPN%21%20%20CloudflareWorker-ji-su-da-jian-%EF%BC%8C-you-xuan-IP%E3%80%81-miao-kai-_%204K-8K%EF%BC%8C-jie-suo-ChatGPT%2C-bu-xian-liu-liang-%EF%BC%81.html">
+<meta property="og:url" content="https://zmxf8.github.io/post/zmxf.qzz.io-zmxf.dpdns.org.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
-<title>永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</title>
+<title>zmxf.qzz.io/zmxf.dpdns.org</title>
 
 
 
@@ -55,13 +43,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 }
 
 </style>
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-warning {border-left-color:var(--borderColor-attention-emphasis, var(--color-attention-emphasis));background-color:var(--color-attention-subtle);}.markdown-alert.markdown-alert-warning .markdown-alert-title {color: var(--fgColor-attention,var(--color-attention-fg));}</style>
+
 
 
 
 <body>
     <div id="header">
-<h1 class="postTitle">永久免费、多节点VPN!  CloudflareWorker极速搭建，优选IP、秒开_ 4K/8K，解锁ChatGPT,不限流量！</h1>
+<h1 class="postTitle">zmxf.qzz.io/zmxf.dpdns.org</h1>
 <div class="title-right">
     <a href="https://zmxf8.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -69,7 +57,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/ZMXF8/zmxf8.github.io/issues/5" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/ZMXF8/zmxf8.github.io/issues/13" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -85,21 +73,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>今天我们主要来说下如果通过 Cloudflare 的 worker 、Pages 搭建永久免费的VPN，真正做到无限流量！</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/3e3be5fc-6844-4d62-9da3-e79d02e92d00"><img src="https://github.com/user-attachments/assets/3e3be5fc-6844-4d62-9da3-e79d02e92d00" alt="Image" style="max-width: 100%;"></a></p>
-<ol>
-<li>首先你得先注册个cloudflare账号<a href="https://dash.cloudflare.com/sign-up" rel="nofollow">点击前往</a></li>
-<li>接着你需要准备好开源软件：V2rayN，因为一会要用到<a href="https://github.com/2dust/v2rayN">立即下载</a></li>
-<li>在Cloudflare 上创建worker，并填写下面的代码，这个代码来自CM在【 <a href="https://github.com/cmliu/edgetunnel?tab=readme-ov-file">Github</a> 】社区的开源项目，代码已经内置IP优选和代理功能，自带动态的UUID，可以大大减少手动配置过程，非常适合新手和特殊用户。</li>
-</ol>
-<h3>注意:创建的worker项目名称最好使用系统默认的，别自定义，以免被系统识别到特殊字符而被屏蔽。</h3>
-<h2>获取Cloudflare 的 worker 开源代码</h2>
-<p>加密版 <a href="https://github.com/cmliu/edgetunnel/blob/main/_worker.js">点击获取</a><br>
-明文版 <a href="https://github.com/cmliu/edgetunnel/blob/main/%E6%98%8E%E6%96%87%E6%BA%90%E7%A0%81.js">点击获取</a><br>
-4. 注册一个免费的域名，可以使用零度解说前几期介绍的注册方法，来获取你自己的免费域名<a href="https://www.freedidi.com/17434.html" rel="nofollow">点击前往</a><br>
-5. 如果想获得更多的优质节点，那么推荐使用IP优选网站或优选工具进行获取！<a href="https://www.freedidi.com/10143.html" rel="nofollow">点击前往</a></p>
-<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p><p>仅限海外用户使用，大陆用户切勿使用（可能违法），别给站长找麻烦！！</p>
-</div></div>
+<div class="markdown-body" id="postBody"><p>标题官网</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -158,11 +132,7 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-cmButton=document.getElementById("cmButton");
-    span=document.createElement("span");
-    span.setAttribute("class","Counter");
-    span.innerHTML="1";
-    cmButton.appendChild(span);
+
 
 
 function openComments(){
